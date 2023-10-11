@@ -1,0 +1,19 @@
+<%- include("partials/header") %>
+    <h4>All Blogs</h4>
+    <h1>Home</h1>
+    <p>
+        <%= homecontent1%>
+    </p>
+    <% for(var i=0;i<newblog.length;i++) { %>
+        <h1>
+            <%= newblog[i].title %>
+        </h1>
+        <p>
+            <%= newblog[i].post.substring(0,100)+"....." %> <a href="/posts/<%=newblog[i].title%>"> read more </a>
+        </p>
+        <% } %>
+            <% newblog.forEach(function(element) { %>
+                <% console.log(element.title) %>
+
+                    <% }) %>
+                        <%- include("partials/footer") %>
